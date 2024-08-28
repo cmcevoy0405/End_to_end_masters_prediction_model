@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masters Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #343a40;
+            border-color: #343a40;
+        }
+        .btn-primary:hover {
+            background-color: #495057;
+            border-color: #495057;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Masters Prediction</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/predict" method="POST">
+                        <div class="form-group">
+                            <label for="Avg_score">Average Score</label>
+                            <input type="text" class="form-control" id="Avg_score" name="Avg_score" placeholder="Enter average score">
+                        </div>
+                        <div class="form-group">
+                            <label for="Drive_Avg">Driving Distance</label>
+                            <input type="text" class="form-control" id="Drive_Avg" name="Drive Avg" placeholder="Enter driving distance">
+                        </div>
+                        <div class="form-group">
+                            <label for="%_of_fairways_hit">Percentage of Fairways Hit</label>
+                            <input type="text" class="form-control" id="%_of_fairways_hit" name="%_of_fairways_hit" placeholder="Enter percentage of fairways hit">
+                        </div>
+                        <div class="form-group">
+                            <label for="Putts_per_round">Putts per Round</label>
+                            <input type="text" class="form-control" id="Putts_per_round" name="Putts per round" placeholder="Enter putts per round">
+                        </div>
+                        <div class="form-group">
+                            <label for="GIR">Greens in Regulation</label>
+                            <input type="text" class="form-control" id="GIR" name="GIR %" placeholder="Enter greens in regulation">
+                        </div>
+                        <div class="form-group">
+                            <label for="Scramble">Scramble Percentage</label>
+                            <input type="text" class="form-control" id="Scramble" name="Scramble %" placeholder="Enter scramble percentage">
+                        </div>
+                        <div class="form-group">
+                            <label for="Bounce_Back">Bounce Back</label>
+                            <input type="text" class="form-control" id="Bounce_Back" name="Bounce_Back %" placeholder="Enter bounce back">
+                        </div>
+                        <div class="form-group">
+                            <label for="Total_Strokes_Gained">Total Strokes Gained</label>
+                            <input type="text" class="form-control" id="Total_Strokes_Gained" name="Total Strokes Gained" placeholder="Enter total strokes gained">
+                        </div>
+                        <div class="form-group">
+                            <label for="SG_OTT">Strokes Gained Off the Tee</label>
+                            <input type="text" class="form-control" id="SG_OTT" name="SG:OTT" placeholder="Enter strokes gained off the tee">
+                        </div>
+                        <div class="form-group">
+                            <label for="SG_ARG">Strokes Gained Around the Green</label>
+                            <input type="text" class="form-control" id="SG_ARG" name="SG:ARG" placeholder="Enter strokes gained around the green">
+                        </div>
+                        <div class="form-group">
+                            <label for="SG_TTG">Strokes Gained Tee to Green</label>
+                            <input type="text" class="form-control" id="SG_TTG" name="SG:TTG" placeholder="Enter strokes gained tee to green">
+                        </div>
+                        <div class="form-group">
+                            <label for="SG_APG">Strokes Gained Approach to Green</label>
+                            <input type="text" class="form-control" id="SG_APG" name="SG:APG" placeholder="Enter strokes gained approach to green">
+                        </div>
+                        <div class="form-group">
+                            <label for="SG_PUTT">Strokes Gained Putting</label>
+                            <input type="text" class="form-control" id="SG_PUTT" name="SG:PUTT" placeholder="Enter strokes gained putting">
+                        </div>
+                        <div class="form-group">
+                            <label for="Par_3_Score">Average Par 3 Score</label>
+                            <input type="text" class="form-control" id="Par_3_Score" name="Par 3 Score" placeholder="Enter average par 3 score">
+                        </div>
+                        <div class="form-group">
+                            <label for="Par_4_Score">Average Par 4 Score</label>
+                            <input type="text" class="form-control" id="Par_4_Score" name="Par 4 score" placeholder="Enter average par 4 score">
+                        </div>
+                        <div class="form-group">
+                            <label for="Par_5_Score">Average Par 5 Score</label>
+                            <input type="text" class="form-control" id="Par_5_Score" name="Par 5 score" placeholder="Enter average par 5 score">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
