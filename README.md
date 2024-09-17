@@ -15,5 +15,28 @@
 I've always been interested in golf and what makes the best in the world the best. Combined with my interest in data and finding data backed solutions, i decided to create a model on who would win the Major golf tournament, the masters.  This involved the full data process from web scraping and model building through to deployment. The entire project was developed in python using flask application as the deployment method. 
 
 ### Scraping
-The pga_scrape.py file showcases the data scraped from a python script. The file scrapes the last 15 years worth of pga data on players that competed in the 2024 masters tournament. 
+The pga_scrape.py file showcases the data scraped from a python script. The file scrapes the last 15 years worth of pga data on players that competed in the 2024 masters tournament. I extracted 18 variables for analysis:
+
+-Driving Distance
+-Top 10 finishes
+-1st position finishes
+-Average score
+-Percentage of fairways hit
+-Putts Per round
+-Percentage of Greens in regulation
+-Scramble Percentage (The players ability to make par from a missed green in regulation)
+-Total Stokes gained 
+-Strokes gained: Off the tee
+-Strokes gained: Around the green
+-Strokes gained: Tee to green
+-Strokes gained: Approach to the green
+-Strokes gained: Putting
+-Par 3 score
+-Par 4 score
+-Par 5 score
+-Master's finish(Predcitore Variable)
+
+It is important to note that this treats each player as a different data point for every year for example there would be 15 data points for Rory McIlroy, one for every year.
+
+I combined all these varaibles in one final dataframe 
 
